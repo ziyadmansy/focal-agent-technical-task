@@ -15,11 +15,23 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
+  # HTTP services
+  http: ^0.13.5
+
+  # State Management
+  flutter_bloc: ^8.1.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^2.0.0
+
+  # Mocks
+  mockito: ^5.4.4
+
+  # Code generation
+  build_runner: ^2.4.7
 
 flutter:
   uses-material-design: true
