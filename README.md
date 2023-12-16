@@ -1,30 +1,15 @@
-# focal_agent_coding_task
+# Technical Task made for [Focal Agent].
 
-A new Flutter project.
+<p>FocalAgent is the UK’s leading visual content partner for estate agents.</p>
 
-## Getting Started
+## Core structure features
 
-This project is a starting point for a Flutter application that follows the
-[simple app state management
-tutorial](https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple).
+ - Clean, scalable, and maintainable architecture
+ - Domain Driven Design (DDD) approach
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## App Data
+To access the APK file and the app flow video, kindly [Click here](https://drive.google.com/drive/folders/1uw62WTJNOGtMf9aY762jUvddCN4SPdva?usp=sharing)
 
-## Assets
-
-The `assets` directory houses images, fonts, and any other files you want to
-include with your application.
-
-The `assets/images` directory contains [resolution-aware
-images](https://flutter.dev/docs/development/ui/assets-and-images#resolution-aware).
-
-## Localization
-
-This project generates localized messages based on arb files found in
-the `lib/src/localization` directory.
-
-To support additional languages, please visit the tutorial on
-[Internationalizing Flutter
-apps](https://flutter.dev/docs/development/accessibility-and-localization/internationalization)
+## Screenshots
+| ![Screenshot 1](https://github.com/ziyadmansy/focal-agent-technical-task/blob/main/it_employees.png?raw=true) | ![Screenshot 2](https://github.com/ziyadmansy/focal-agent-technical-task/blob/main/hr_employees.png?raw=true) |
+|--|--|
