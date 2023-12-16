@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:focal_agent_coding_task/src/modules/employees/data_layer/repositories/employees_repository.dart';
+import 'package:focal_agent_coding_task/src/modules/employees/data_layer/repositories/employees_repo_impl.dart';
+import 'package:focal_agent_coding_task/src/modules/employees/domain_layer/repositories/employees_repo.dart';
 import 'package:meta/meta.dart';
 
 part 'employees_event.dart';
@@ -13,5 +14,5 @@ class EmployeesBloc extends Bloc<EmployeesEvent, EmployeesState> {
       // TODO: implement event handler
     });
   }
-  final EmployeesRepository employeesRepo;
+  final EmployeesRepo employeesRepo;
 }
