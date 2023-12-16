@@ -15,8 +15,9 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  # HTTP services
+  # Network services
   http: ^0.13.5
+  connectivity_plus: ^5.0.2
 
   # State Management
   flutter_bloc: ^8.1.3

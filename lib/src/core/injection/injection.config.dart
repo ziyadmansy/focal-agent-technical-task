@@ -21,6 +21,7 @@ import '../../modules/employees/data_layer/repositories/employees_repo_impl.dart
     as _i7;
 import '../../modules/employees/domain_layer/repositories/employees_repo.dart'
     as _i6;
+import '../network/network_connectivity_service.dart' as _i8;
 
 extension GetItInjectableX on _i1.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -44,7 +45,7 @@ extension GetItInjectableX on _i1.GetIt {
     gh.lazySingleton<_i6.EmployeesRepo>(() => _i7.EmployeesRepoImpl(
           httpEmployeesDataSource: gh<_i3.EmployeesDataSource>(),
           localEmployeesDataSource: gh<_i3.EmployeesDataSource>(),
-          networkDataSource: gh<_i3.EmployeesDataSource>(),
+          networkDataSource: gh<_i8.NetworkConnectivityService>(),
         ));
     return this;
   }
