@@ -10,9 +10,18 @@ class EmployeesBloc extends Bloc<EmployeesEvent, EmployeesState> {
   EmployeesBloc(
     this.employeesRepo,
   ) : super(EmployeesInitialState()) {
-    on<EmployeesInitialEvent>((event, emit) {
-      // TODO: implement event handler
-    });
+    onHandler();
   }
   final EmployeesRepo employeesRepo;
+
+  void onHandler() {
+    on<EmployeesEvent>((event, emit) async {
+      print(event);
+      if (event is EmployeesStarted) {
+        emit(EmployeesLoadingState());
+        await employeesRepo.getEmployeesByDepartmentId(1);
+        emit(EmployeesSuccessState());
+      }
+    });
+  }
 }

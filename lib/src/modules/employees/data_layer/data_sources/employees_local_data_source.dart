@@ -1,13 +1,15 @@
-import 'package:focal_agent_coding_task/src/modules/employees/data_layer/data_sources/employees_data_source.dart';
 import 'package:focal_agent_coding_task/src/modules/employees/data_layer/models/employee_model.dart';
 import 'package:injectable/injectable.dart';
 
-@Named("localImpl") 
-@LazySingleton(as: EmployeesDataSource)
-class EmployeesLocalDataSourceImpl implements EmployeesDataSource {
+abstract interface class EmployeesLocalDataSource {
+  Future<List<EmployeeModel>> getEmployeesByDepartmentId(int id);
+}
+
+@LazySingleton(as: EmployeesLocalDataSource)
+class EmployeesLocalDataSourceImpl implements EmployeesLocalDataSource {
   @override
   Future<List<EmployeeModel>> getEmployeesByDepartmentId(int id) async {
-    Future.delayed(const Duration(seconds: 1));
+    await Future.delayed(const Duration(seconds: 1));
 
     return [
       EmployeeModel(
