@@ -22,26 +22,22 @@ class EmployeesScreen extends StatelessWidget {
       create: (context) => EmployeesBloc(
         getIt.get<EmployeesRepo>(),
       )..add(EmployeesStarted()),
-      child: BlocBuilder<EmployeesBloc, EmployeesState>(
-        builder: (context, state) {
-          return DefaultTabController(
-            length: myTabs.length,
-            child: Scaffold(
-              appBar: AppBar(
-                title: Text(locale!.appTitle),
-                bottom: const TabBar(
-                  tabs: myTabs,
-                ),
-              ),
-              body: const TabBarView(
-                children: [
-                  ItEmployeesPage(),
-                  HrEmployeesPage(),
-                ],
-              ),
+      child: DefaultTabController(
+        length: myTabs.length,
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text(locale!.appTitle),
+            bottom: const TabBar(
+              tabs: myTabs,
             ),
-          );
-        },
+          ),
+          body: const TabBarView(
+            children: [
+              ItEmployeesPage(),
+              HrEmployeesPage(),
+            ],
+          ),
+        ),
       ),
     );
   }

@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:focal_agent_coding_task/src/modules/employees/data_layer/repositories/employees_repo_impl.dart';
+import 'package:focal_agent_coding_task/src/modules/employees/data_layer/models/employee_model.dart';
 import 'package:focal_agent_coding_task/src/modules/employees/domain_layer/repositories/employees_repo.dart';
 import 'package:meta/meta.dart';
 
@@ -15,12 +15,29 @@ class EmployeesBloc extends Bloc<EmployeesEvent, EmployeesState> {
   final EmployeesRepo employeesRepo;
 
   void onHandler() {
-    on<EmployeesEvent>((event, emit) async {
-      print(event);
-      if (event is EmployeesStarted) {
+    on<EmployeesStarted>((event, emit) async {});
+
+    on<ITEmployeesLoadStarted>((event, emit) async {
+      try {
         emit(EmployeesLoadingState());
-        await employeesRepo.getEmployeesByDepartmentId(1);
-        emit(EmployeesSuccessState());
+        final employees = await employeesRepo.getEmployeesByDepartmentId(
+          event.depId,
+        );
+        emit(EmployeesSuccessState(employees: employees));
+      } catch (e) {
+        emit(EmployeesFailState());
+      }
+    });
+
+    on<HREmployeesLoadStarted>((event, emit) async {
+      try {
+        emit(EmployeesLoadingState());
+        final employees = await employeesRepo.getEmployeesByDepartmentId(
+          event.depId,
+        );
+        emit(EmployeesSuccessState(employees: employees));
+      } catch (e) {
+        emit(EmployeesFailState());
       }
     });
   }

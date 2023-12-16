@@ -9,6 +9,8 @@ abstract interface class EmployeesRemoteDataSource {
 class EmployeesRemoteDataSourceImpl implements EmployeesRemoteDataSource {
   @override
   Future<List<EmployeeModel>> getEmployeesByDepartmentId(int id) async {
+    /// Gets employees by department ID from API
+    /// (e.g. REST, GraphQL, etc.)
     await Future.delayed(const Duration(seconds: 1));
 
     return [

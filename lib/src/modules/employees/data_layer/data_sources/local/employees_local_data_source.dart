@@ -9,6 +9,8 @@ abstract interface class EmployeesLocalDataSource {
 class EmployeesLocalDataSourceImpl implements EmployeesLocalDataSource {
   @override
   Future<List<EmployeeModel>> getEmployeesByDepartmentId(int id) async {
+    /// Gets employees by department ID from Local Storage
+    /// (e.g. SQLite, Hive, etc.)
     await Future.delayed(const Duration(seconds: 1));
 
     return [
