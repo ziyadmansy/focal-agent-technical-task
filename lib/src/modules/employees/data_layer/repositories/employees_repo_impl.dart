@@ -32,4 +32,15 @@ class EmployeesRepoImpl implements EmployeesRepo {
       return await _localEmployeesDataSource.getEmployeesByDepartmentId(id);
     }
   }
+
+  @override
+  Future<void> saveEmployeesByDepartmentId({
+    required int id,
+    required List<EmployeeModel> employees,
+  }) {
+    return _localEmployeesDataSource.saveEmployeesByDepartmentId(
+      depId: id,
+      employees: employees,
+    );
+  }
 }

@@ -23,6 +23,10 @@ class EmployeesBloc extends Bloc<EmployeesEvent, EmployeesState> {
         final employees = await employeesRepo.getEmployeesByDepartmentId(
           event.depId,
         );
+        await employeesRepo.saveEmployeesByDepartmentId(
+          id: event.depId,
+          employees: employees,
+        );
         emit(EmployeesSuccessState(employees: employees));
       } catch (e) {
         emit(EmployeesFailState());
@@ -34,6 +38,10 @@ class EmployeesBloc extends Bloc<EmployeesEvent, EmployeesState> {
         emit(EmployeesLoadingState());
         final employees = await employeesRepo.getEmployeesByDepartmentId(
           event.depId,
+        );
+        await employeesRepo.saveEmployeesByDepartmentId(
+          id: event.depId,
+          employees: employees,
         );
         emit(EmployeesSuccessState(employees: employees));
       } catch (e) {

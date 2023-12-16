@@ -3,10 +3,24 @@ import 'package:injectable/injectable.dart';
 
 abstract interface class EmployeesLocalDataSource {
   Future<List<EmployeeModel>> getEmployeesByDepartmentId(int id);
+  Future<void> saveEmployeesByDepartmentId({
+    required int depId,
+    required List<EmployeeModel> employees,
+  });
 }
 
 @LazySingleton(as: EmployeesLocalDataSource)
 class EmployeesLocalDataSourceImpl implements EmployeesLocalDataSource {
+  @override
+  Future<void> saveEmployeesByDepartmentId({
+    required int depId,
+    required List<EmployeeModel> employees,
+  }) {
+    /// Saves employees by department ID to Local Storage
+    /// (e.g. SQLite, Hive, etc.)
+    return Future.delayed(const Duration(seconds: 1));
+  }
+
   @override
   Future<List<EmployeeModel>> getEmployeesByDepartmentId(int id) async {
     /// Gets employees by department ID from Local Storage
