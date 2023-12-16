@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:focal_agent_coding_task/src/modules/employees/data_layer/data_sources/employees_remote_data_source.dart';
+import 'package:focal_agent_coding_task/src/modules/employees/data_layer/data_sources/remote/employees_remote_data_source.dart';
 
 // @GenerateMocks([EmployeesServiceImpl])
 // void main() {

@@ -11,9 +11,9 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
-import '../../modules/employees/data_layer/data_sources/employees_local_data_source.dart'
+import '../../modules/employees/data_layer/data_sources/local/employees_local_data_source.dart'
     as _i3;
-import '../../modules/employees/data_layer/data_sources/employees_remote_data_source.dart'
+import '../../modules/employees/data_layer/data_sources/remote/employees_remote_data_source.dart'
     as _i4;
 import '../../modules/employees/data_layer/repositories/employees_repo_impl.dart'
     as _i7;
