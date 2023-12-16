@@ -3,4 +3,10 @@ part of 'employees_bloc.dart';
 @immutable
 sealed class EmployeesState {}
 
-final class EmployeesInitial extends EmployeesState {}
+final class EmployeesInitialState extends EmployeesState {}
+
+final class EmployeesLoadingState extends EmployeesState {}
+
+final class EmployeesSuccessState extends EmployeesState {}
+
+final class EmployeesFailState extends EmployeesState {}

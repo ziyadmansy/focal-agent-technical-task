@@ -1,6 +1,5 @@
 import 'package:focal_agent_coding_task/src/modules/employees/data_layer/models/employee_model.dart';
 import 'package:focal_agent_coding_task/src/modules/employees/domain_layer/services/employees_service.dart';
-import 'package:http/http.dart';
 
 class EmployeesServiceImpl implements EmployeesService {
   // Overriden service method that gets course details

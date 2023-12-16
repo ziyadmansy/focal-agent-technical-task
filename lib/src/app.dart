@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:focal_agent_coding_task/src/modules/employees/presentation_layer/screens/employees_screen.dart';
 import 'settings/settings_controller.dart';
 
 /// The Widget that configures your application.
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       listenable: settingsController,
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           // Providing a restorationScopeId allows the Navigator built by the
           // MaterialApp to restore the navigation stack when a user leaves and
           // returns to the app after it has been killed while running in the
@@ -61,6 +63,9 @@ class MyApp extends StatelessWidget {
             colorSchemeSeed: Colors.blue,
           ),
           themeMode: settingsController.themeMode,
+          routes: {
+            '/': (context) => const EmployeesScreen(),
+          },
         );
       },
     );
