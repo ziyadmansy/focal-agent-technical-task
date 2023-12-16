@@ -5,7 +5,8 @@
 ## Core structure features
 
  - Clean, scalable, and maintainable architecture
- - Domain Driven Design (DDD) approach
+ - Domain-Driven Design(DDD) approach
+ - BloC architecture with flutter_bloc state management package
 
 ## App Data
 To access the APK file and the app flow video, kindly [Click here](https://drive.google.com/drive/folders/1uw62WTJNOGtMf9aY762jUvddCN4SPdva?usp=sharing)
