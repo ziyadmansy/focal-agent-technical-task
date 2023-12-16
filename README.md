@@ -2,7 +2,7 @@
 
 <p>FocalAgent is the UK’s leading visual content partner for estate agents.</p>
 
-## Core structure features
+## Technical features
 
  - Clean, scalable, and maintainable architecture
  - Domain-Driven Design(DDD) approach
