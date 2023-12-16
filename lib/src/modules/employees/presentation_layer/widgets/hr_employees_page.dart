@@ -28,12 +28,18 @@ class _HrEmployeesPageState extends State<HrEmployeesPage> {
           EmployeesInitialState() => SharedWidgets.buildLoading(),
           EmployeesLoadingState() => SharedWidgets.buildLoading(),
           EmployeesFailState() => SharedWidgets.buildError(),
-          EmployeesSuccessState() => Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ListView.builder(
-                itemCount: state.employees.length,
-                itemBuilder: (context, i) => EmployeeCard(
-                  employeeModel: state.employees[i],
+          EmployeesSuccessState() => RefreshIndicator(
+              onRefresh: () async =>
+                  BlocProvider.of<EmployeesBloc>(context).add(
+                HREmployeesLoadStarted(depId: 2),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ListView.builder(
+                  itemCount: state.employees.length,
+                  itemBuilder: (context, i) => EmployeeCard(
+                    employeeModel: state.employees[i],
+                  ),
                 ),
               ),
             ),
