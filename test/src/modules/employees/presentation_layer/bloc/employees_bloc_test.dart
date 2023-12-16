@@ -1,6 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:focal_agent_coding_task/src/modules/employees/data_layer/services_impl/employees_service_impl.dart';
-import 'package:focal_agent_coding_task/src/modules/employees/presentation_layer/bloc/employees_bloc.dart';
+import 'package:focal_agent_coding_task/src/modules/employees/data_layer/data_providers_impl/http_employees_data_source_impl.dart';
 
 // @GenerateMocks([EmployeesServiceImpl])
 // void main() {

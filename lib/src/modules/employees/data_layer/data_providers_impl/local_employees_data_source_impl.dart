@@ -1,7 +1,7 @@
 import 'package:focal_agent_coding_task/src/modules/employees/data_layer/models/employee_model.dart';
 import 'package:focal_agent_coding_task/src/modules/employees/domain_layer/services/employees_service.dart';
 
-class EmployeesServiceImpl implements EmployeesDataSource {
+class LocalEmployeesDataSourceImpl implements EmployeesDataSource {
   // Overriden service method that gets course details
   // from test remote API
   @override
